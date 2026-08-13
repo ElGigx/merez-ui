@@ -1,63 +1,62 @@
 :root {
-  --white: #ffffff;
+  --white: 255 255 255;
+  --paper-25: 251 248 241;
+  --paper-50: 244 239 228;
+  --paper-100: 236 229 215;
+  --paper-150: 233 225 210;
+  --paper-200: 226 217 199;
+  --paper-300: 221 212 194;
+  --paper-500: 196 185 163;
+  --paper-600: 138 131 119;
+  --paper-700: 92 85 75;
+  --paper-800: 58 53 44;
+  --paper-900: 38 36 31;
 
-  --paper-25: #fbf8f1;
-  --paper-50: #f4efe4;
-  --paper-100: #ece5d7;
-  --paper-150: #e9e1d2;
-  --paper-200: #e2d9c7;
-  --paper-300: #ddd4c2;
-  --paper-500: #c4b9a3;
-  --paper-600: #8a8377;
-  --paper-700: #5c554b;
-  --paper-800: #3a352c;
-  --paper-900: #26241f;
+  --slate-50: 233 236 239;
+  --slate-100: 206 212 218;
+  --slate-200: 173 181 189;
+  --slate-300: 134 142 150;
+  --slate-400: 108 117 125;
+  --slate-500: 63 69 76;
+  --slate-600: 52 58 64;
+  --slate-700: 42 47 52;
+  --slate-750: 40 44 49;
+  --slate-800: 35 39 44;
+  --slate-850: 33 37 41;
+  --slate-900: 26 29 33;
+  --slate-950: 22 25 28;
 
-  --slate-50: #e9ecef;
-  --slate-100: #ced4da;
-  --slate-200: #adb5bd;
-  --slate-300: #868e96;
-  --slate-400: #6c757d;
-  --slate-500: #3f454c;
-  --slate-600: #343a40;
-  --slate-700: #2a2f34;
-  --slate-750: #282c31;
-  --slate-800: #23272c;
-  --slate-850: #212529;
-  --slate-900: #1a1d21;
-  --slate-950: #16191c;
+  --forest-50: 223 236 228;
+  --forest-200: 127 201 160;
+  --forest-300: 70 172 118;
+  --forest-400: 30 122 82;
+  --forest-500: 31 77 58;
+  --forest-900: 22 48 42;
 
-  --forest-50: #dfece4;
-  --forest-200: #7fc9a0;
-  --forest-300: #46ac76;
-  --forest-400: #1e7a52;
-  --forest-500: #1f4d3a;
-  --forest-900: #16302a;
+  --gold-50: 243 232 207;
+  --gold-300: 224 182 92;
+  --gold-400: 214 166 68;
+  --gold-450: 201 154 60;
+  --gold-500: 184 134 43;
+  --gold-600: 174 125 38;
+  --gold-700: 122 87 20;
 
-  --gold-50: #f3e8cf;
-  --gold-300: #e0b65c;
-  --gold-400: #d6a644;
-  --gold-450: #c99a3c;
-  --gold-500: #b8862b;
-  --gold-600: #ae7d26;
-  --gold-700: #7a5714;
+  --rust-50: 246 226 218;
+  --rust-200: 232 160 141;
+  --rust-300: 224 128 107;
+  --rust-600: 154 59 34;
+  --rust-700: 125 47 27;
 
-  --rust-50: #f6e2da;
-  --rust-200: #e8a08d;
-  --rust-300: #e0806b;
-  --rust-600: #9a3b22;
-  --rust-700: #7d2f1b;
-
-  --dv-green-600: #12946a;
-  --dv-green-400: #2ba36b;
-  --dv-violet-600: #7a4fcf;
-  --dv-violet-400: #8b5cf6;
-  --dv-amber-600: #c2610f;
-  --dv-amber-400: #d97706;
-  --dv-blue-600: #2563c9;
-  --dv-blue-400: #3b82f6;
-  --dv-magenta-600: #a3175f;
-  --dv-magenta-400: #e0407f;
+  --dv-green-600: 18 148 106;
+  --dv-green-400: 43 163 107;
+  --dv-violet-600: 122 79 207;
+  --dv-violet-400: 139 92 246;
+  --dv-amber-600: 194 97 15;
+  --dv-amber-400: 217 119 6;
+  --dv-blue-600: 37 99 201;
+  --dv-blue-400: 59 130 246;
+  --dv-magenta-600: 163 23 95;
+  --dv-magenta-400: 224 64 127;
 }
 
 :root {
@@ -77,8 +76,8 @@
 
   --gold: var(--gold-500);
   --gold-line: var(--gold-600);
-  --gold-tint: color-mix(in srgb, var(--gold-500) 16%, transparent);
   --on-gold: var(--paper-900);
+  --gold-tint: color-mix(in srgb, rgb(var(--gold-500)) 16%, transparent);
 
   --tertiary: var(--rust-600);
   --critical-red: var(--rust-600);
@@ -92,8 +91,8 @@
   --data-learners: var(--dv-magenta-600);
 
   --error: var(--rust-600);
-  --error-container: var(--rust-50);
   --on-error: var(--white);
+  --error-container: rgb(var(--rust-50));
 
   --background: var(--paper-150);
   --surface: var(--paper-50);
@@ -111,14 +110,14 @@
   --outline: var(--paper-500);
   --outline-variant: var(--paper-300);
 
-  --status-vigente-bg: var(--forest-50);
-  --status-vigente-fg: var(--forest-500);
-  --status-vencido-bg: var(--rust-50);
-  --status-vencido-fg: var(--rust-700);
-  --status-pendiente-bg: var(--gold-50);
-  --status-pendiente-fg: var(--gold-700);
-  --status-neutro-bg: var(--paper-100);
-  --status-neutro-fg: var(--paper-700);
+  --status-vigente-bg: rgb(var(--forest-50));
+  --status-vigente-fg: rgb(var(--forest-500));
+  --status-vencido-bg: rgb(var(--rust-50));
+  --status-vencido-fg: rgb(var(--rust-700));
+  --status-pendiente-bg: rgb(var(--gold-50));
+  --status-pendiente-fg: rgb(var(--gold-700));
+  --status-neutro-bg: rgb(var(--paper-100));
+  --status-neutro-fg: rgb(var(--paper-700));
 
   --font-display-family: "Alegreya", ui-serif, Georgia, "Times New Roman", serif;
   --font-body-family: "Nunito", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -140,8 +139,8 @@
     --on-secondary-container: var(--forest-900);
     --gold: var(--gold-400);
     --gold-line: var(--gold-450);
-    --gold-tint: color-mix(in srgb, var(--gold-400) 16%, transparent);
     --on-gold: var(--slate-950);
+    --gold-tint: color-mix(in srgb, rgb(var(--gold-400)) 16%, transparent);
     --tertiary: var(--rust-300);
     --critical-red: var(--rust-300);
     --data-credits: var(--dv-green-400);
@@ -153,7 +152,7 @@
     --on-tertiary: var(--slate-950);
     --error: var(--rust-300);
     --on-error: var(--slate-950);
-    --error-container: color-mix(in srgb, var(--rust-300) 16%, transparent);
+    --error-container: color-mix(in srgb, rgb(var(--rust-300)) 16%, transparent);
     --background: var(--slate-950);
     --surface: var(--slate-900);
     --surface-container-lowest: var(--slate-850);
@@ -167,14 +166,14 @@
     --on-surface-variant: var(--slate-200);
     --outline: var(--slate-400);
     --outline-variant: var(--slate-500);
-    --status-vigente-bg: color-mix(in srgb, var(--forest-300) 20%, transparent);
-    --status-vigente-fg: var(--forest-200);
-    --status-vencido-bg: color-mix(in srgb, var(--rust-300) 20%, transparent);
-    --status-vencido-fg: var(--rust-200);
-    --status-pendiente-bg: color-mix(in srgb, var(--gold-400) 20%, transparent);
-    --status-pendiente-fg: var(--gold-300);
-    --status-neutro-bg: var(--slate-700);
-    --status-neutro-fg: var(--slate-200);
+    --status-vigente-bg: color-mix(in srgb, rgb(var(--forest-300)) 20%, transparent);
+    --status-vigente-fg: rgb(var(--forest-200));
+    --status-vencido-bg: color-mix(in srgb, rgb(var(--rust-300)) 20%, transparent);
+    --status-vencido-fg: rgb(var(--rust-200));
+    --status-pendiente-bg: color-mix(in srgb, rgb(var(--gold-400)) 20%, transparent);
+    --status-pendiente-fg: rgb(var(--gold-300));
+    --status-neutro-bg: rgb(var(--slate-700));
+    --status-neutro-fg: rgb(var(--slate-200));
   }
 }
 
@@ -192,8 +191,8 @@
   --on-secondary-container: var(--forest-900);
   --gold: var(--gold-400);
   --gold-line: var(--gold-450);
-  --gold-tint: color-mix(in srgb, var(--gold-400) 16%, transparent);
   --on-gold: var(--slate-950);
+  --gold-tint: color-mix(in srgb, rgb(var(--gold-400)) 16%, transparent);
   --tertiary: var(--rust-300);
   --critical-red: var(--rust-300);
   --on-tertiary: var(--slate-950);
@@ -205,7 +204,7 @@
   --data-learners: var(--dv-magenta-400);
   --error: var(--rust-300);
   --on-error: var(--slate-950);
-  --error-container: color-mix(in srgb, var(--rust-300) 16%, transparent);
+  --error-container: color-mix(in srgb, rgb(var(--rust-300)) 16%, transparent);
   --background: var(--slate-950);
   --surface: var(--slate-900);
   --surface-container-lowest: var(--slate-850);
@@ -219,12 +218,12 @@
   --on-surface-variant: var(--slate-200);
   --outline: var(--slate-400);
   --outline-variant: var(--slate-500);
-  --status-vigente-bg: color-mix(in srgb, var(--forest-300) 20%, transparent);
-  --status-vigente-fg: var(--forest-200);
-  --status-vencido-bg: color-mix(in srgb, var(--rust-300) 20%, transparent);
-  --status-vencido-fg: var(--rust-200);
-  --status-pendiente-bg: color-mix(in srgb, var(--gold-400) 20%, transparent);
-  --status-pendiente-fg: var(--gold-300);
-  --status-neutro-bg: var(--slate-700);
-  --status-neutro-fg: var(--slate-200);
+  --status-vigente-bg: color-mix(in srgb, rgb(var(--forest-300)) 20%, transparent);
+  --status-vigente-fg: rgb(var(--forest-200));
+  --status-vencido-bg: color-mix(in srgb, rgb(var(--rust-300)) 20%, transparent);
+  --status-vencido-fg: rgb(var(--rust-200));
+  --status-pendiente-bg: color-mix(in srgb, rgb(var(--gold-400)) 20%, transparent);
+  --status-pendiente-fg: rgb(var(--gold-300));
+  --status-neutro-bg: rgb(var(--slate-700));
+  --status-neutro-fg: rgb(var(--slate-200));
 }

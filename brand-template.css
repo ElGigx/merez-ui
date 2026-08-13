@@ -5,7 +5,7 @@
 
   --gold: var(--gold-500);
   --gold-line: var(--gold-600);
-  --gold-tint: color-mix(in srgb, var(--gold-500) 16%, transparent);
+  --gold-tint: color-mix(in srgb, rgb(var(--gold-500)) 16%, transparent);
   --on-gold: var(--paper-900);
 
   --secondary: var(--forest-500);
@@ -18,7 +18,7 @@
   :root:not([data-theme="light"]) {
     --gold: var(--gold-400);
     --gold-line: var(--gold-450);
-    --gold-tint: color-mix(in srgb, var(--gold-400) 16%, transparent);
+    --gold-tint: color-mix(in srgb, rgb(var(--gold-400)) 16%, transparent);
     --on-gold: var(--slate-950);
 
     --secondary: var(--forest-300);
@@ -31,7 +31,7 @@
 :root[data-theme="dark"] {
   --gold: var(--gold-400);
   --gold-line: var(--gold-450);
-  --gold-tint: color-mix(in srgb, var(--gold-400) 16%, transparent);
+  --gold-tint: color-mix(in srgb, rgb(var(--gold-400)) 16%, transparent);
   --on-gold: var(--slate-950);
 
   --secondary: var(--forest-300);

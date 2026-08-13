@@ -25,6 +25,18 @@ use it; it is not the foundation and a consumer never has to adopt it.
 | `brand-template.css` | The client override contract: the tokens a client redefines to make the base its own. | client sites |
 | `tailwind-preset.js` | Maps the semantic tokens to Tailwind utilities. Optional. | Tailwind consumers only |
 
+## Token format
+
+Two kinds of tokens:
+
+- **Role tokens are RGB channel triplets** (`--secondary: 31 77 58`), consumed as
+  `rgb(var(--secondary))` or, through Tailwind, as `rgb(var(--secondary) / <alpha-value>)`
+  — so opacity modifiers like `bg-secondary/50` and `ring-outline/10` work everywhere.
+  This is what marketing and client sites need.
+- **Ready-made colors** (`--gold-tint`, `--error-container`, every `--status-*-bg` /
+  `--status-*-fg`) are already full colors (`rgb(...)` / `color-mix(...)`), consumed
+  directly (`background: var(--status-vigente-bg)`), not through `/alpha`.
+
 ## How to consume
 
 ### Zero-build site (a client, plain HTML)
