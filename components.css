@@ -1,0 +1,146 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--on-background);
+  font-family: var(--font-body-family);
+  font-weight: 500;
+}
+
+select option {
+  background-color: var(--surface-container-lowest);
+  color: var(--on-surface);
+}
+
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+[role="switch"]:focus-visible,
+[role="tab"]:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--gold-line);
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  display: inline-block;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.outline-border {
+  border: 1px solid var(--outline-variant);
+}
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 12px;
+  border-radius: 9999px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.btn-cta {
+  height: 44px;
+  padding: 0 24px;
+  background: var(--secondary-container);
+  color: var(--on-secondary);
+  font-weight: 700;
+  border-radius: 0.5rem;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: filter 0.15s ease, transform 0.1s ease;
+  cursor: pointer;
+}
+.btn-cta:hover {
+  filter: brightness(1.05);
+}
+.btn-cta:active {
+  transform: scale(0.97);
+}
+.btn-cta:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  height: 44px;
+  padding: 0 24px;
+  background: var(--primary);
+  color: var(--on-primary);
+  font-weight: 700;
+  border-radius: 0.5rem;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: filter 0.15s ease, transform 0.1s ease;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  filter: brightness(1.05);
+}
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+.btn-secondary {
+  height: 44px;
+  padding: 0 24px;
+  background: transparent;
+  color: var(--primary);
+  font-weight: 700;
+  border-radius: 0.5rem;
+  border: 2px solid var(--primary);
+  transition: background 0.15s ease;
+  cursor: pointer;
+}
+
+.field-input {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  background: var(--surface-container-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: 0.5rem;
+  color: var(--on-surface);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.field-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 18%, transparent);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--outline-variant);
+  border-radius: 10px;
+}

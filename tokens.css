@@ -1,0 +1,230 @@
+:root {
+  --white: #ffffff;
+
+  --paper-25: #fbf8f1;
+  --paper-50: #f4efe4;
+  --paper-100: #ece5d7;
+  --paper-150: #e9e1d2;
+  --paper-200: #e2d9c7;
+  --paper-300: #ddd4c2;
+  --paper-500: #c4b9a3;
+  --paper-600: #8a8377;
+  --paper-700: #5c554b;
+  --paper-800: #3a352c;
+  --paper-900: #26241f;
+
+  --slate-50: #e9ecef;
+  --slate-100: #ced4da;
+  --slate-200: #adb5bd;
+  --slate-300: #868e96;
+  --slate-400: #6c757d;
+  --slate-500: #3f454c;
+  --slate-600: #343a40;
+  --slate-700: #2a2f34;
+  --slate-750: #282c31;
+  --slate-800: #23272c;
+  --slate-850: #212529;
+  --slate-900: #1a1d21;
+  --slate-950: #16191c;
+
+  --forest-50: #dfece4;
+  --forest-200: #7fc9a0;
+  --forest-300: #46ac76;
+  --forest-400: #1e7a52;
+  --forest-500: #1f4d3a;
+  --forest-900: #16302a;
+
+  --gold-50: #f3e8cf;
+  --gold-300: #e0b65c;
+  --gold-400: #d6a644;
+  --gold-450: #c99a3c;
+  --gold-500: #b8862b;
+  --gold-600: #ae7d26;
+  --gold-700: #7a5714;
+
+  --rust-50: #f6e2da;
+  --rust-200: #e8a08d;
+  --rust-300: #e0806b;
+  --rust-600: #9a3b22;
+  --rust-700: #7d2f1b;
+
+  --dv-green-600: #12946a;
+  --dv-green-400: #2ba36b;
+  --dv-violet-600: #7a4fcf;
+  --dv-violet-400: #8b5cf6;
+  --dv-amber-600: #c2610f;
+  --dv-amber-400: #d97706;
+  --dv-blue-600: #2563c9;
+  --dv-blue-400: #3b82f6;
+  --dv-magenta-600: #a3175f;
+  --dv-magenta-400: #e0407f;
+}
+
+:root {
+  color-scheme: light;
+
+  --primary: var(--paper-900);
+  --primary-container: var(--paper-800);
+  --primary-fixed: var(--paper-100);
+  --on-primary: var(--paper-25);
+  --on-primary-container: var(--paper-700);
+
+  --secondary: var(--forest-500);
+  --secondary-container: var(--forest-500);
+  --secondary-soft: var(--forest-50);
+  --on-secondary: var(--white);
+  --on-secondary-container: var(--forest-50);
+
+  --gold: var(--gold-500);
+  --gold-line: var(--gold-600);
+  --gold-tint: color-mix(in srgb, var(--gold-500) 16%, transparent);
+  --on-gold: var(--paper-900);
+
+  --tertiary: var(--rust-600);
+  --critical-red: var(--rust-600);
+  --on-tertiary: var(--white);
+
+  --data-credits: var(--dv-green-600);
+  --data-storage: var(--dv-violet-600);
+  --data-products: var(--dv-amber-600);
+  --data-users: var(--dv-blue-600);
+  --data-courses: var(--dv-amber-600);
+  --data-learners: var(--dv-magenta-600);
+
+  --error: var(--rust-600);
+  --error-container: var(--rust-50);
+  --on-error: var(--white);
+
+  --background: var(--paper-150);
+  --surface: var(--paper-50);
+  --surface-container-lowest: var(--paper-25);
+  --surface-container-low: var(--paper-50);
+  --surface-container: var(--paper-100);
+  --surface-container-high: var(--paper-200);
+  --surface-container-highest: var(--paper-300);
+  --surface-variant: var(--paper-100);
+
+  --on-background: var(--paper-900);
+  --on-surface: var(--paper-900);
+  --on-surface-variant: var(--paper-700);
+
+  --outline: var(--paper-500);
+  --outline-variant: var(--paper-300);
+
+  --status-vigente-bg: var(--forest-50);
+  --status-vigente-fg: var(--forest-500);
+  --status-vencido-bg: var(--rust-50);
+  --status-vencido-fg: var(--rust-700);
+  --status-pendiente-bg: var(--gold-50);
+  --status-pendiente-fg: var(--gold-700);
+  --status-neutro-bg: var(--paper-100);
+  --status-neutro-fg: var(--paper-700);
+
+  --font-display-family: "Alegreya", ui-serif, Georgia, "Times New Roman", serif;
+  --font-body-family: "Nunito", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --primary: var(--slate-100);
+    --primary-container: var(--slate-600);
+    --primary-fixed: var(--slate-700);
+    --on-primary: var(--slate-950);
+    --on-primary-container: var(--slate-200);
+    --secondary: var(--forest-300);
+    --secondary-container: var(--forest-400);
+    --secondary-soft: var(--forest-900);
+    --on-secondary: var(--white);
+    --on-secondary-container: var(--forest-900);
+    --gold: var(--gold-400);
+    --gold-line: var(--gold-450);
+    --gold-tint: color-mix(in srgb, var(--gold-400) 16%, transparent);
+    --on-gold: var(--slate-950);
+    --tertiary: var(--rust-300);
+    --critical-red: var(--rust-300);
+    --data-credits: var(--dv-green-400);
+    --data-storage: var(--dv-violet-400);
+    --data-products: var(--dv-amber-400);
+    --data-users: var(--dv-blue-400);
+    --data-courses: var(--dv-amber-400);
+    --data-learners: var(--dv-magenta-400);
+    --on-tertiary: var(--slate-950);
+    --error: var(--rust-300);
+    --on-error: var(--slate-950);
+    --error-container: color-mix(in srgb, var(--rust-300) 16%, transparent);
+    --background: var(--slate-950);
+    --surface: var(--slate-900);
+    --surface-container-lowest: var(--slate-850);
+    --surface-container-low: var(--slate-800);
+    --surface-container: var(--slate-750);
+    --surface-container-high: var(--slate-700);
+    --surface-container-highest: var(--slate-600);
+    --surface-variant: var(--slate-600);
+    --on-background: var(--slate-50);
+    --on-surface: var(--slate-50);
+    --on-surface-variant: var(--slate-200);
+    --outline: var(--slate-400);
+    --outline-variant: var(--slate-500);
+    --status-vigente-bg: color-mix(in srgb, var(--forest-300) 20%, transparent);
+    --status-vigente-fg: var(--forest-200);
+    --status-vencido-bg: color-mix(in srgb, var(--rust-300) 20%, transparent);
+    --status-vencido-fg: var(--rust-200);
+    --status-pendiente-bg: color-mix(in srgb, var(--gold-400) 20%, transparent);
+    --status-pendiente-fg: var(--gold-300);
+    --status-neutro-bg: var(--slate-700);
+    --status-neutro-fg: var(--slate-200);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --primary: var(--slate-100);
+  --primary-container: var(--slate-600);
+  --primary-fixed: var(--slate-700);
+  --on-primary: var(--slate-950);
+  --on-primary-container: var(--slate-200);
+  --secondary: var(--forest-300);
+  --secondary-container: var(--forest-400);
+  --secondary-soft: var(--forest-900);
+  --on-secondary: var(--white);
+  --on-secondary-container: var(--forest-900);
+  --gold: var(--gold-400);
+  --gold-line: var(--gold-450);
+  --gold-tint: color-mix(in srgb, var(--gold-400) 16%, transparent);
+  --on-gold: var(--slate-950);
+  --tertiary: var(--rust-300);
+  --critical-red: var(--rust-300);
+  --on-tertiary: var(--slate-950);
+  --data-credits: var(--dv-green-400);
+  --data-storage: var(--dv-violet-400);
+  --data-products: var(--dv-amber-400);
+  --data-users: var(--dv-blue-400);
+  --data-courses: var(--dv-amber-400);
+  --data-learners: var(--dv-magenta-400);
+  --error: var(--rust-300);
+  --on-error: var(--slate-950);
+  --error-container: color-mix(in srgb, var(--rust-300) 16%, transparent);
+  --background: var(--slate-950);
+  --surface: var(--slate-900);
+  --surface-container-lowest: var(--slate-850);
+  --surface-container-low: var(--slate-800);
+  --surface-container: var(--slate-750);
+  --surface-container-high: var(--slate-700);
+  --surface-container-highest: var(--slate-600);
+  --surface-variant: var(--slate-600);
+  --on-background: var(--slate-50);
+  --on-surface: var(--slate-50);
+  --on-surface-variant: var(--slate-200);
+  --outline: var(--slate-400);
+  --outline-variant: var(--slate-500);
+  --status-vigente-bg: color-mix(in srgb, var(--forest-300) 20%, transparent);
+  --status-vigente-fg: var(--forest-200);
+  --status-vencido-bg: color-mix(in srgb, var(--rust-300) 20%, transparent);
+  --status-vencido-fg: var(--rust-200);
+  --status-pendiente-bg: color-mix(in srgb, var(--gold-400) 20%, transparent);
+  --status-pendiente-fg: var(--gold-300);
+  --status-neutro-bg: var(--slate-700);
+  --status-neutro-fg: var(--slate-200);
+}

@@ -1,0 +1,41 @@
+:root {
+  --font-display-family: "Alegreya", ui-serif, Georgia, "Times New Roman", serif;
+  --font-body-family: "Nunito", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --gold: var(--gold-500);
+  --gold-line: var(--gold-600);
+  --gold-tint: color-mix(in srgb, var(--gold-500) 16%, transparent);
+  --on-gold: var(--paper-900);
+
+  --secondary: var(--forest-500);
+  --secondary-container: var(--forest-500);
+  --secondary-soft: var(--forest-50);
+  --on-secondary: var(--white);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --gold: var(--gold-400);
+    --gold-line: var(--gold-450);
+    --gold-tint: color-mix(in srgb, var(--gold-400) 16%, transparent);
+    --on-gold: var(--slate-950);
+
+    --secondary: var(--forest-300);
+    --secondary-container: var(--forest-400);
+    --secondary-soft: var(--forest-900);
+    --on-secondary: var(--white);
+  }
+}
+
+:root[data-theme="dark"] {
+  --gold: var(--gold-400);
+  --gold-line: var(--gold-450);
+  --gold-tint: color-mix(in srgb, var(--gold-400) 16%, transparent);
+  --on-gold: var(--slate-950);
+
+  --secondary: var(--forest-300);
+  --secondary-container: var(--forest-400);
+  --secondary-soft: var(--forest-900);
+  --on-secondary: var(--white);
+}
