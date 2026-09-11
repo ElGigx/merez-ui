@@ -1,6 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 32 32" fill="none" role="img" aria-label="Merez">
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 32 32" fill="none">
   <rect width="32" height="32" rx="7" fill="#17140f"/>
-  <path d="M4 24C4 13.5066 12.5066 5 23 5" stroke="#B8862B" stroke-width="3" stroke-linecap="round"/>
-  <path d="M9 24C9 16.268 15.268 10 23 10" stroke="#B8862B" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
-  <path d="M14 24C14 19.0294 18.0294 15 23 15" stroke="#B8862B" stroke-width="3" stroke-linecap="round" opacity="0.45"/>
+  <g transform="translate(1.15 0.05) scale(1.1)">
+    <path d="M4 24C4 13.5066 12.5066 5 23 5" stroke="#B8862B" stroke-width="3" stroke-linecap="round"/>
+    <path d="M9 24C9 16.268 15.268 10 23 10" stroke="#B8862B" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <path d="M14 24C14 19.0294 18.0294 15 23 15" stroke="#B8862B" stroke-width="3" stroke-linecap="round" opacity="0.45"/>
+  </g>
 </svg>
