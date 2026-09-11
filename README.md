@@ -105,6 +105,24 @@ A fourth, functional and not a brand color: **rust** (`--tertiary` / `--critical
 (merez-web previously used `.btn-primary` for the green action; on adoption it migrates
 that usage to `.btn-cta`.)
 
+## Logo
+
+The Merez mark is **three concentric arcs** in brand gold (`--gold`, `#d19621`), each
+lighter than the last (opacity 1 · 0.7 · 0.45) — an echo of the Inflinds waves. The
+wordmark is **"Merez"** in **Alegreya 800, sentence case** (capital M): the display face,
+the same the titles use. It never renders lowercase (`merez`); the older sun icon and the
+"M" glyph are retired and must not appear.
+
+Assets — the source of truth:
+
+- `logo/merez-mark.svg` — the arcs alone. The app/nav icon, and the piece next to the wordmark.
+- `logo/merez-favicon.svg` — the arcs on a dark rounded square, for favicons (web and admin).
+
+The full lockup is rendered by each consumer as the mark next to **live text** ("Merez" in
+real Alegreya 800, not an outline) so it stays crisp and localizable. Rules: gold is the
+only mark color; on dark grounds the wordmark inverts to the light ink while the arcs stay
+gold; never recolor, rotate, or reintroduce the retired sun/M glyphs.
+
 ## Why the ground changes temperature between themes
 
 - Darkening a bright yellow turns it to brown. On cream paper no bright gold reaches

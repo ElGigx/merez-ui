@@ -1,6 +1,6 @@
 {
   "name": "merez-ui",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Merez shared design system — framework-agnostic CSS core (tokens, components, fonts) plus an optional Tailwind adapter, consumed by every Merez frontend and used as the base for client sites.",
   "type": "module",
   "license": "UNLICENSED",
@@ -12,7 +12,9 @@
     "merez.css",
     "brand-template.css",
     "tailwind-preset.js",
-    "tailwind-preset.d.ts"
+    "tailwind-preset.d.ts",
+    "logo/merez-mark.svg",
+    "logo/merez-favicon.svg"
   ],
   "exports": {
     "./tokens.css": "./tokens.css",
@@ -20,6 +22,8 @@
     "./components.css": "./components.css",
     "./merez.css": "./merez.css",
     "./brand-template.css": "./brand-template.css",
+    "./logo/merez-mark.svg": "./logo/merez-mark.svg",
+    "./logo/merez-favicon.svg": "./logo/merez-favicon.svg",
     "./tailwind-preset": {
       "types": "./tailwind-preset.d.ts",
       "default": "./tailwind-preset.js"
