@@ -272,7 +272,7 @@
   --background: var(--paper-5);
   --surface: var(--paper-2);
   --surface-container-lowest: var(--paper-0);
-  --surface-container-low: var(--paper-2);
+  --surface-container-low: var(--paper-10);
   --surface-container: var(--paper-5);
   --surface-container-high: var(--paper-10);
   --surface-container-highest: var(--paper-15);
@@ -302,8 +302,8 @@
   :root:not([data-theme="light"]) {
     color-scheme: dark;
     --primary: var(--paper-5);
-    --primary-container: var(--ink-85);
-    --primary-fixed: var(--ink-90);
+    --primary-container: var(--ink-80);
+    --primary-fixed: var(--ink-85);
     --on-primary: var(--ink-98);
     --on-primary-container: var(--paper-2);
     --secondary: var(--forest-50);
@@ -325,19 +325,19 @@
     --data-users: var(--dv-blue-50);
     --data-courses: var(--dv-amber-50);
     --data-learners: var(--dv-magenta-50);
-    --background: var(--ink-98);
-    --surface: var(--ink-95);
-    --surface-container-lowest: var(--ink-98);
-    --surface-container-low: var(--ink-95);
-    --surface-container: var(--ink-95);
-    --surface-container-high: var(--ink-90);
-    --surface-container-highest: var(--ink-85);
-    --surface-variant: var(--ink-90);
+    --background: var(--ink-95);
+    --surface: var(--ink-90);
+    --surface-container-lowest: var(--ink-90);
+    --surface-container-low: var(--ink-85);
+    --surface-container: var(--ink-90);
+    --surface-container-high: var(--ink-85);
+    --surface-container-highest: var(--ink-80);
+    --surface-variant: var(--ink-85);
     --on-background: var(--paper-2);
     --on-surface: var(--paper-2);
     --on-surface-variant: var(--paper-30);
-    --outline: var(--ink-55);
-    --outline-variant: var(--ink-85);
+    --outline: var(--ink-50);
+    --outline-variant: var(--ink-80);
     --gold-tint: color-mix(in srgb, hsl(var(--gold)) 16%, transparent);
     --error-container: hsl(var(--rust-90));
     --status-vigente-bg: hsl(var(--forest-90));
@@ -346,7 +346,7 @@
     --status-vencido-fg: hsl(var(--rust-25));
     --status-pendiente-bg: hsl(var(--gold-90));
     --status-pendiente-fg: hsl(var(--gold-25));
-    --status-neutro-bg: hsl(var(--ink-90));
+    --status-neutro-bg: hsl(var(--ink-85));
     --status-neutro-fg: hsl(var(--ink-25));
   }
 }
@@ -354,8 +354,8 @@
 :root[data-theme="dark"] {
   color-scheme: dark;
   --primary: var(--paper-5);
-  --primary-container: var(--ink-85);
-  --primary-fixed: var(--ink-90);
+  --primary-container: var(--ink-80);
+  --primary-fixed: var(--ink-85);
   --on-primary: var(--ink-98);
   --on-primary-container: var(--paper-2);
   --secondary: var(--forest-50);
@@ -377,19 +377,19 @@
   --data-users: var(--dv-blue-50);
   --data-courses: var(--dv-amber-50);
   --data-learners: var(--dv-magenta-50);
-  --background: var(--ink-98);
-  --surface: var(--ink-95);
-  --surface-container-lowest: var(--ink-98);
-  --surface-container-low: var(--ink-95);
-  --surface-container: var(--ink-95);
-  --surface-container-high: var(--ink-90);
-  --surface-container-highest: var(--ink-85);
-  --surface-variant: var(--ink-90);
+  --background: var(--ink-95);
+  --surface: var(--ink-90);
+  --surface-container-lowest: var(--ink-90);
+  --surface-container-low: var(--ink-85);
+  --surface-container: var(--ink-90);
+  --surface-container-high: var(--ink-85);
+  --surface-container-highest: var(--ink-80);
+  --surface-variant: var(--ink-85);
   --on-background: var(--paper-2);
   --on-surface: var(--paper-2);
   --on-surface-variant: var(--paper-30);
-  --outline: var(--ink-55);
-  --outline-variant: var(--ink-85);
+  --outline: var(--ink-50);
+  --outline-variant: var(--ink-80);
   --gold-tint: color-mix(in srgb, hsl(var(--gold)) 16%, transparent);
   --error-container: hsl(var(--rust-90));
   --status-vigente-bg: hsl(var(--forest-90));
@@ -398,6 +398,6 @@
   --status-vencido-fg: hsl(var(--rust-25));
   --status-pendiente-bg: hsl(var(--gold-90));
   --status-pendiente-fg: hsl(var(--gold-25));
-  --status-neutro-bg: hsl(var(--ink-90));
+  --status-neutro-bg: hsl(var(--ink-85));
   --status-neutro-fg: hsl(var(--ink-25));
 }

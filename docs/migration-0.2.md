@@ -79,7 +79,7 @@ The recommended token is the step of the same family whose darkness is closest t
 
 ### Families that changed purpose
 
-- `slate` used to be the dark-mode ground (`slate-950` as page, `slate-50` as text). The dark-mode neutral is now `ink` (hue 226, 40 % saturation, grounds start at `ink-98` / `ink-95`), so the slate rows above recommend the `ink` step. `slate` still exists, but only as a desaturated cool gray (hue 212, 12 %) for borders and secondary text where the warm `paper` does not fit. If you need the old cool gray at the same darkness, use the same number in `slate` (for example `slate-85` instead of `ink-85`).
+- `slate` used to be the dark-mode ground (`slate-950` as page, `slate-50` as text). The dark-mode neutral is now `ink` (hue 226, 40 % saturation, grounds start at `ink-95` (page) and `ink-90` (cards)), so the slate rows above recommend the `ink` step. `slate` still exists, but only as a desaturated cool gray (hue 212, 12 %) for borders and secondary text where the warm `paper` does not fit. If you need the old cool gray at the same darkness, use the same number in `slate` (for example `slate-85` instead of `ink-85`).
 - Do not port the old dark-mode grounds one to one (they read as pastel mid-darks): use the roles `background` and `surface-container-*`, which start at 98 or 95.
 - `--white` is gone: use `--paper-0` (pure white).
 - `paper` and `gold` and the others keep their meaning. `--gold-450` (a one-off step) maps to `gold-50`.
@@ -91,11 +91,12 @@ Names are unchanged; values follow table 3 of the spec. Notable differences:
 
 | Role | Before (light / dark) | Now (light / dark) |
 |---|---|---|
-| `--background` | paper-150 / slate-950 | paper-5 / ink-98 |
-| `--surface`, `--surface-container-low` | paper-50 / slate-900, slate-800 | paper-2 / ink-95 |
+| `--background` | paper-150 / slate-950 | paper-5 / ink-95 |
+| `--surface` | paper-50 / slate-900 | paper-2 / ink-90 |
+| `--surface-container-low` | paper-50 / slate-800 | paper-10 / ink-85 |
 | `--on-surface` | paper-900 / slate-50 | ink-95 / paper-2 |
 | `--on-surface-variant` | paper-700 / slate-200 | paper-70 / paper-30 |
-| `--outline` | paper-500 / slate-400 | paper-50 / ink-55 (moved from the spec's paper-30 / ink-70 to reach 3:1) |
+| `--outline` | paper-500 / slate-400 | paper-50 / ink-50 (moved from the spec's paper-30 / ink-70 to reach 3:1) |
 | `--primary` | paper-900 / slate-100 | ink-95 / paper-5 |
 | `--secondary`, `--secondary-container` | forest-500 / forest-300, forest-400 | forest-80 / forest-50 (both equal in each mode) |
 | `--gold` | gold-500 / gold-400 | gold-55 / gold-40 |

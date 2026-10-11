@@ -56,27 +56,29 @@ Components use roles, never raw steps. Light / dark:
 
 | Role | Light | Dark |
 |---|---|---|
-| `background` | paper-5 | ink-98 |
-| `surface`, `surface-container-low` | paper-2 | ink-95 |
-| `surface-container-lowest` | paper-0 | ink-98 |
-| `surface-container` | paper-5 | ink-95 |
-| `surface-container-high` | paper-10 | ink-90 |
-| `surface-container-highest` | paper-15 | ink-85 |
+| `background` | paper-5 | ink-95 |
+| `surface` | paper-2 | ink-90 |
+| `surface-container-low` | paper-10 | ink-85 |
+| `surface-container-lowest` | paper-0 | ink-90 |
+| `surface-container` | paper-5 | ink-90 |
+| `surface-container-high`, `surface-variant` | paper-10 | ink-85 |
+| `surface-container-highest` | paper-15 | ink-80 |
 | `on-background`, `on-surface` | ink-95 | paper-2 |
 | `on-surface-variant` | paper-70 | paper-30 |
-| `outline` | paper-50 | ink-55 |
-| `outline-variant` | paper-15 | ink-85 |
+| `outline` | paper-50 | ink-50 |
+| `outline-variant` | paper-15 | ink-80 |
+| `primary-container` / `primary-fixed` | ink-90 / paper-10 | ink-80 / ink-85 |
 | `primary` / `on-primary` | ink-95 / paper-2 | paper-5 / ink-98 |
 | `secondary`, `secondary-container` / `on-secondary` | forest-80 / paper-0 | forest-50 / ink-98 |
 | `secondary-soft` | forest-10 | forest-90 |
 | `gold` / `gold-line` / `on-gold` | gold-55 / gold-60 / ink-95 | gold-40 / gold-30 / ink-98 |
 | `error`, `tertiary`, `critical-red` / `on-error` | rust-65 / paper-0 | rust-40 / ink-98 |
 
-Status chips (`--status-vigente-*`, `--status-vencido-*`, `--status-pendiente-*`, `--status-neutro-*`) and `--error-container` are ready-made colors (`hsl(var(--forest-10))`), consumed directly: background 10 (light) / 90 (dark), text 75 (light) / 25 (dark). `--gold-tint` is a `color-mix` of the gold role.
+Status chips (`--status-vigente-*`, `--status-vencido-*`, `--status-pendiente-*`, `--status-neutro-*`) and `--error-container` are ready-made colors (`hsl(var(--forest-10))`), consumed directly: background 10 (light) / 90 (dark; 85 for `neutro`, which would vanish on a card), text 75 (light) / 25 (dark). `--gold-tint` is a `color-mix` of the gold role.
 
-Background rule: dark-mode grounds start at 98 or 95; light-mode grounds at 2 or 5. No mid-dark "pastel" grounds.
+Background rule: the dark page is `ink-95` and the cards (`surface`, `surface-container`, `surface-container-lowest`) are `ink-90`; boxes inside a card (`surface-container-low`, `-high`) are `ink-85` and `surface-container-highest` is `ink-80`, so each layer is lighter than the one it sits on; `surface-container-lowest` is the card face in this panel (526 uses) so it sits at `ink-90`, one layer above the page, not sunken as in Material. Light-mode grounds start at 2 or 5. No mid-dark "pastel" grounds.
 
-`outline` is `paper-50` / `ink-55` instead of the spec table's `paper-30` / `ink-70`: those two failed the 3:1 border rule against the background (1.8:1 and 1.9:1), so the step moved, not the rule.
+`outline` is `paper-50` / `ink-50` instead of the spec table's `paper-30` / `ink-70`: those two failed the 3:1 border rule against the background (1.8:1 and 1.9:1), so the step moved, not the rule.
 
 ### Regenerate and check
 

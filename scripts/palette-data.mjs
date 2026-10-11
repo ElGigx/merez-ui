@@ -31,8 +31,8 @@ export const fonts = {
 
 export const roles = [
   ["primary", "ink-95", "paper-5"],
-  ["primary-container", "ink-90", "ink-85"],
-  ["primary-fixed", "paper-10", "ink-90"],
+  ["primary-container", "ink-90", "ink-80"],
+  ["primary-fixed", "paper-10", "ink-85"],
   ["on-primary", "paper-2", "ink-98"],
   ["on-primary-container", "paper-2", "paper-2"],
 
@@ -60,21 +60,21 @@ export const roles = [
   ["data-courses", "dv-amber-60", "dv-amber-50"],
   ["data-learners", "dv-magenta-60", "dv-magenta-50"],
 
-  ["background", "paper-5", "ink-98"],
-  ["surface", "paper-2", "ink-95"],
-  ["surface-container-lowest", "paper-0", "ink-98"],
-  ["surface-container-low", "paper-2", "ink-95"],
-  ["surface-container", "paper-5", "ink-95"],
-  ["surface-container-high", "paper-10", "ink-90"],
-  ["surface-container-highest", "paper-15", "ink-85"],
-  ["surface-variant", "paper-10", "ink-90"],
+  ["background", "paper-5", "ink-95"],
+  ["surface", "paper-2", "ink-90"],
+  ["surface-container-lowest", "paper-0", "ink-90"],
+  ["surface-container-low", "paper-10", "ink-85"],
+  ["surface-container", "paper-5", "ink-90"],
+  ["surface-container-high", "paper-10", "ink-85"],
+  ["surface-container-highest", "paper-15", "ink-80"],
+  ["surface-variant", "paper-10", "ink-85"],
 
   ["on-background", "ink-95", "paper-2"],
   ["on-surface", "ink-95", "paper-2"],
   ["on-surface-variant", "paper-70", "paper-30"],
 
-  ["outline", "paper-50", "ink-55"],
-  ["outline-variant", "paper-15", "ink-85"],
+  ["outline", "paper-50", "ink-50"],
+  ["outline-variant", "paper-15", "ink-80"],
 ];
 
 export const tints = [
@@ -89,7 +89,7 @@ export const statuses = [
   ["status-vencido-fg", "rust-75", "rust-25"],
   ["status-pendiente-bg", "gold-10", "gold-90"],
   ["status-pendiente-fg", "gold-75", "gold-25"],
-  ["status-neutro-bg", "paper-10", "ink-90"],
+  ["status-neutro-bg", "paper-10", "ink-85"],
   ["status-neutro-fg", "paper-75", "ink-25"],
 ];
 
