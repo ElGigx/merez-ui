@@ -3,39 +3,36 @@
   --font-body-family: "Nunito", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
   --font-mono-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  --gold: var(--gold-500);
-  --gold-line: var(--gold-600);
-  --gold-tint: color-mix(in srgb, rgb(var(--gold-500)) 16%, transparent);
-  --on-gold: var(--paper-900);
-
-  --secondary: var(--forest-500);
-  --secondary-container: var(--forest-500);
-  --secondary-soft: var(--forest-50);
-  --on-secondary: var(--white);
+  --secondary: var(--forest-80);
+  --secondary-container: var(--forest-80);
+  --secondary-soft: var(--forest-10);
+  --on-secondary: var(--paper-0);
+  --gold: var(--gold-55);
+  --gold-line: var(--gold-60);
+  --on-gold: var(--ink-95);
+  --gold-tint: color-mix(in srgb, hsl(var(--gold)) 16%, transparent);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --gold: var(--gold-400);
-    --gold-line: var(--gold-450);
-    --gold-tint: color-mix(in srgb, rgb(var(--gold-400)) 16%, transparent);
-    --on-gold: var(--slate-950);
-
-    --secondary: var(--forest-300);
-    --secondary-container: var(--forest-400);
-    --secondary-soft: var(--forest-900);
-    --on-secondary: var(--white);
+    --secondary: var(--forest-50);
+    --secondary-container: var(--forest-50);
+    --secondary-soft: var(--forest-90);
+    --on-secondary: var(--ink-98);
+    --gold: var(--gold-40);
+    --gold-line: var(--gold-30);
+    --on-gold: var(--ink-98);
+    --gold-tint: color-mix(in srgb, hsl(var(--gold)) 16%, transparent);
   }
 }
 
 :root[data-theme="dark"] {
-  --gold: var(--gold-400);
-  --gold-line: var(--gold-450);
-  --gold-tint: color-mix(in srgb, rgb(var(--gold-400)) 16%, transparent);
-  --on-gold: var(--slate-950);
-
-  --secondary: var(--forest-300);
-  --secondary-container: var(--forest-400);
-  --secondary-soft: var(--forest-900);
-  --on-secondary: var(--white);
+  --secondary: var(--forest-50);
+  --secondary-container: var(--forest-50);
+  --secondary-soft: var(--forest-90);
+  --on-secondary: var(--ink-98);
+  --gold: var(--gold-40);
+  --gold-line: var(--gold-30);
+  --on-gold: var(--ink-98);
+  --gold-tint: color-mix(in srgb, hsl(var(--gold)) 16%, transparent);
 }

@@ -1,4 +1,4 @@
-const role = (name) => `rgb(var(${name}) / <alpha-value>)`;
+const role = (name) => `hsl(var(${name}) / <alpha-value>)`;
 
 export default {
   darkMode: ["class", '[data-theme="dark"]'],
@@ -48,7 +48,7 @@ export default {
         xl: "0.75rem",
       },
       boxShadow: {
-        sm: "0 2px 4px rgba(26, 27, 37, 0.05)",
+        sm: "0 2px 4px hsl(var(--ink-95) / 0.05)",
       },
     },
   },
