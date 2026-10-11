@@ -32,7 +32,7 @@ Source of truth: gigxOS `BRANDS/Merez/Sistema-de-color.md`. Migration from 0.1.x
 ### The rule
 
 - Every color is **HSL**.
-- The number of a step is its **darkness**: `number = 100 - L`. **0 is pure white, 100 is pure black.** `gold-60` is a gold with 40 % lightness; `ink-98` is an ink blue with 2 % lightness. The same number means the same lightness in any family.
+- The number of a step is its **darkness**: `number = 100 - L`. **0 is pure white, 100 is pure black.** `gold-60` is a gold with 40 % lightness; `slate-98` is a charcoal gray with 2 % lightness. The same number means the same lightness in any family.
 - Steps: 0, 2, 5, 10, 15, 20, 25, 30, 40, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 98, 100 (25, 65 and 75 were added to the standard list because the spec's status and error roles use them).
 - Tokens are channel triplets: `--gold-55: 39 66% 45%;`, consumed as `hsl(var(--gold-55))` or `hsl(var(--gold-55) / 0.5)`. Through Tailwind, `bg-secondary/50` works because the preset maps roles to `hsl(var(--x) / <alpha-value>)`.
 
@@ -41,11 +41,11 @@ Source of truth: gigxOS `BRANDS/Merez/Sistema-de-color.md`. Migration from 0.1.x
 | Family | Hue | Saturation | Use |
 |---|---|---|---|
 | `paper` | 40 | 50 % (steps 0-5), 40 % (10-20), 22 % (25-65), 14 % (70+) | Warm neutral: light-mode grounds and text |
-| `ink` | 226 | 40 % | Cool ink neutral: dark-mode grounds, dark primary |
+| `ink` | 226 | 40 % | Cool ink blue: light-mode text and primary. No dark-mode role uses it |
 | `gold` | 39 | 66 % | Brand |
 | `forest` | 152 | 40 % (up to 50), 46 % (above) | Action, "valid / ok" |
 | `rust` | 13 | 62 % | Error, critical, "expired" |
-| `slate` | 212 | 12 % | Cool gray support |
+| `slate` | 212 | 12 % | Charcoal gray: all dark-mode grounds, outlines and on-colors, plus borders and secondary text where `paper` does not fit |
 | `dv-green`, `dv-violet`, `dv-amber`, `dv-blue`, `dv-magenta` | 160, 260, 28, 217, 330 | 75, 80, 90, 80, 75 % | Data colors (charts) |
 
 The family table lives in `scripts/palette-data.mjs`; `tokens.css` is generated from it.
@@ -56,29 +56,29 @@ Components use roles, never raw steps. Light / dark:
 
 | Role | Light | Dark |
 |---|---|---|
-| `background` | paper-5 | ink-95 |
-| `surface` | paper-2 | ink-90 |
-| `surface-container-low` | paper-10 | ink-85 |
-| `surface-container-lowest` | paper-0 | ink-90 |
-| `surface-container` | paper-5 | ink-90 |
-| `surface-container-high`, `surface-variant` | paper-10 | ink-85 |
-| `surface-container-highest` | paper-15 | ink-80 |
+| `background` | paper-5 | slate-95 |
+| `surface` | paper-2 | slate-90 |
+| `surface-container-low` | paper-10 | slate-85 |
+| `surface-container-lowest` | paper-0 | slate-90 |
+| `surface-container` | paper-5 | slate-90 |
+| `surface-container-high`, `surface-variant` | paper-10 | slate-85 |
+| `surface-container-highest` | paper-15 | slate-80 |
 | `on-background`, `on-surface` | ink-95 | paper-2 |
 | `on-surface-variant` | paper-70 | paper-30 |
-| `outline` | paper-50 | ink-50 |
-| `outline-variant` | paper-15 | ink-80 |
-| `primary-container` / `primary-fixed` | ink-90 / paper-10 | ink-80 / ink-85 |
-| `primary` / `on-primary` | ink-95 / paper-2 | paper-5 / ink-98 |
-| `secondary`, `secondary-container` / `on-secondary` | forest-80 / paper-0 | forest-50 / ink-98 |
+| `outline` | paper-50 | slate-55 |
+| `outline-variant` | paper-15 | slate-80 |
+| `primary-container` / `primary-fixed` | ink-90 / paper-10 | slate-80 / slate-85 |
+| `primary` / `on-primary` | ink-95 / paper-2 | paper-5 / slate-98 |
+| `secondary`, `secondary-container` / `on-secondary` | forest-80 / paper-0 | forest-50 / slate-98 |
 | `secondary-soft` | forest-10 | forest-90 |
-| `gold` / `gold-line` / `on-gold` | gold-55 / gold-60 / ink-95 | gold-40 / gold-30 / ink-98 |
-| `error`, `tertiary`, `critical-red` / `on-error` | rust-65 / paper-0 | rust-40 / ink-98 |
+| `gold` / `gold-line` / `on-gold` | gold-55 / gold-60 / ink-95 | gold-40 / gold-30 / slate-98 |
+| `error`, `tertiary`, `critical-red` / `on-error` | rust-65 / paper-0 | rust-40 / slate-98 |
 
 Status chips (`--status-vigente-*`, `--status-vencido-*`, `--status-pendiente-*`, `--status-neutro-*`) and `--error-container` are ready-made colors (`hsl(var(--forest-10))`), consumed directly: background 10 (light) / 90 (dark; 85 for `neutro`, which would vanish on a card), text 75 (light) / 25 (dark). `--gold-tint` is a `color-mix` of the gold role.
 
-Background rule: the dark page is `ink-95` and the cards (`surface`, `surface-container`, `surface-container-lowest`) are `ink-90`; boxes inside a card (`surface-container-low`, `-high`) are `ink-85` and `surface-container-highest` is `ink-80`, so each layer is lighter than the one it sits on; `surface-container-lowest` is the card face in this panel (526 uses) so it sits at `ink-90`, one layer above the page, not sunken as in Material. Light-mode grounds start at 2 or 5. No mid-dark "pastel" grounds.
+Background rule: the dark page is `slate-95` and the cards (`surface`, `surface-container`, `surface-container-lowest`) are `slate-90`; boxes inside a card (`surface-container-low`, `-high`) are `slate-85` and `surface-container-highest` is `slate-80`, so each layer is lighter than the one it sits on; `surface-container-lowest` is the card face in this panel (526 uses) so it sits at `slate-90`, one layer above the page, not sunken as in Material. Light-mode grounds start at 2 or 5. No mid-dark "pastel" grounds.
 
-`outline` is `paper-50` / `ink-50` instead of the spec table's `paper-30` / `ink-70`: those two failed the 3:1 border rule against the background (1.8:1 and 1.9:1), so the step moved, not the rule.
+`outline` is `paper-50` / `slate-55` instead of the spec table's `paper-30` / `ink-70`: those two failed the 3:1 border rule against the background (1.8:1 and 1.9:1), so the step moved, not the rule.
 
 ### Regenerate and check
 
@@ -185,7 +185,7 @@ gold; never recolor, rotate, or reintroduce the retired sun/M glyphs.
 
 ## Why the light and dark grounds differ
 
-Light mode is a warm `paper` ground and dark mode is the cool `ink` ground, both at the extremes of the scale (2/5 and 95/98). Darkening a bright yellow turns it brown, so in **light** mode gold is a **surface** (`on-gold` ink on top) and never small text; in **dark** mode gold reads on the ground and can be ink. The action accent keeps two tokens: `--secondary` (what is read) and `--secondary-container` (what is filled). In 0.2.0 they coincide in both modes; the split stays so a client brand can separate them.
+Light mode is a warm `paper` ground and dark mode is the charcoal `slate` ground (the same gray as the dark mode before 0.2.0, with the new levels), both at the extremes of the scale (2/5 and 95/98). Darkening a bright yellow turns it brown, so in **light** mode gold is a **surface** (`on-gold` ink on top) and never small text; in **dark** mode gold reads on the ground and can be ink. The action accent keeps two tokens: `--secondary` (what is read) and `--secondary-container` (what is filled). In 0.2.0 they coincide in both modes; the split stays so a client brand can separate them.
 
 ## The data palette is not a fourth role
 

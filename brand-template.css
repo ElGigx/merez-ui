@@ -18,10 +18,10 @@
     --secondary: var(--forest-50);
     --secondary-container: var(--forest-50);
     --secondary-soft: var(--forest-90);
-    --on-secondary: var(--ink-98);
+    --on-secondary: var(--slate-98);
     --gold: var(--gold-40);
     --gold-line: var(--gold-30);
-    --on-gold: var(--ink-98);
+    --on-gold: var(--slate-98);
     --gold-tint: color-mix(in srgb, hsl(var(--gold)) 16%, transparent);
   }
 }
@@ -30,9 +30,9 @@
   --secondary: var(--forest-50);
   --secondary-container: var(--forest-50);
   --secondary-soft: var(--forest-90);
-  --on-secondary: var(--ink-98);
+  --on-secondary: var(--slate-98);
   --gold: var(--gold-40);
   --gold-line: var(--gold-30);
-  --on-gold: var(--ink-98);
+  --on-gold: var(--slate-98);
   --gold-tint: color-mix(in srgb, hsl(var(--gold)) 16%, transparent);
 }

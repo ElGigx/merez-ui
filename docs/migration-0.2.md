@@ -35,19 +35,19 @@ The recommended token is the step of the same family whose darkness is closest t
 | `--paper-700` | 92 85 75 | 67 | `--paper-65` |  |
 | `--paper-800` | 58 53 44 | 80 | `--paper-80` |  |
 | `--paper-900` | 38 36 31 | 86 | `--paper-85` |  |
-| `--slate-50` | 233 236 239 | 7 | `--ink-5` | see note on slate |
-| `--slate-100` | 206 212 218 | 17 | `--ink-15` | see note on slate |
-| `--slate-200` | 173 181 189 | 29 | `--ink-30` | see note on slate |
-| `--slate-300` | 134 142 150 | 44 | `--ink-40` | see note on slate |
-| `--slate-400` | 108 117 125 | 54 | `--ink-55` | see note on slate |
-| `--slate-500` | 63 69 76 | 73 | `--ink-75` | see note on slate |
-| `--slate-600` | 52 58 64 | 77 | `--ink-75` | see note on slate |
-| `--slate-700` | 42 47 52 | 82 | `--ink-80` | see note on slate |
-| `--slate-750` | 40 44 49 | 83 | `--ink-85` | see note on slate |
-| `--slate-800` | 35 39 44 | 85 | `--ink-85` | see note on slate |
-| `--slate-850` | 33 37 41 | 85 | `--ink-85` | see note on slate |
-| `--slate-900` | 26 29 33 | 88 | `--ink-90` | see note on slate |
-| `--slate-950` | 22 25 28 | 90 | `--ink-90` | see note on slate |
+| `--slate-50` | 233 236 239 | 7 | `--slate-5` | same family, step by darkness |
+| `--slate-100` | 206 212 218 | 17 | `--slate-15` | same family, step by darkness |
+| `--slate-200` | 173 181 189 | 29 | `--slate-30` | same family, step by darkness |
+| `--slate-300` | 134 142 150 | 44 | `--slate-40` | same family, step by darkness |
+| `--slate-400` | 108 117 125 | 54 | `--slate-55` | same family, step by darkness |
+| `--slate-500` | 63 69 76 | 73 | `--slate-75` | same family, step by darkness |
+| `--slate-600` | 52 58 64 | 77 | `--slate-75` | same family, step by darkness |
+| `--slate-700` | 42 47 52 | 82 | `--slate-80` | same family, step by darkness |
+| `--slate-750` | 40 44 49 | 83 | `--slate-85` | same family, step by darkness |
+| `--slate-800` | 35 39 44 | 85 | `--slate-85` | same family, step by darkness |
+| `--slate-850` | 33 37 41 | 85 | `--slate-85` | same family, step by darkness |
+| `--slate-900` | 26 29 33 | 88 | `--slate-90` | same family, step by darkness |
+| `--slate-950` | 22 25 28 | 90 | `--slate-90` | same family, step by darkness |
 | `--forest-50` | 223 236 228 | 10 | `--forest-10` |  |
 | `--forest-200` | 127 201 160 | 36 | `--forest-40` |  |
 | `--forest-300` | 70 172 118 | 53 | `--forest-55` |  |
@@ -79,7 +79,7 @@ The recommended token is the step of the same family whose darkness is closest t
 
 ### Families that changed purpose
 
-- `slate` used to be the dark-mode ground (`slate-950` as page, `slate-50` as text). The dark-mode neutral is now `ink` (hue 226, 40 % saturation, grounds start at `ink-95` (page) and `ink-90` (cards)), so the slate rows above recommend the `ink` step. `slate` still exists, but only as a desaturated cool gray (hue 212, 12 %) for borders and secondary text where the warm `paper` does not fit. If you need the old cool gray at the same darkness, use the same number in `slate` (for example `slate-85` instead of `ink-85`).
+- `slate` keeps its job as the dark-mode ground: the charcoal gray (hue 212, 12 % saturation) is the same cool gray as before 0.2.0, so the slate rows above recommend the `slate` step of the same darkness. What changed is the levels: the page is `slate-95`, cards are `slate-90`, inner boxes `slate-85` and the highest layer `slate-80`. `ink` (hue 226, 40 %) stays in the palette for light-mode text and primary, and no dark-mode role uses it.
 - Do not port the old dark-mode grounds one to one (they read as pastel mid-darks): use the roles `background` and `surface-container-*`, which start at 98 or 95.
 - `--white` is gone: use `--paper-0` (pure white).
 - `paper` and `gold` and the others keep their meaning. `--gold-450` (a one-off step) maps to `gold-50`.
@@ -91,12 +91,12 @@ Names are unchanged; values follow table 3 of the spec. Notable differences:
 
 | Role | Before (light / dark) | Now (light / dark) |
 |---|---|---|
-| `--background` | paper-150 / slate-950 | paper-5 / ink-95 |
-| `--surface` | paper-50 / slate-900 | paper-2 / ink-90 |
-| `--surface-container-low` | paper-50 / slate-800 | paper-10 / ink-85 |
+| `--background` | paper-150 / slate-950 | paper-5 / slate-95 |
+| `--surface` | paper-50 / slate-900 | paper-2 / slate-90 |
+| `--surface-container-low` | paper-50 / slate-800 | paper-10 / slate-85 |
 | `--on-surface` | paper-900 / slate-50 | ink-95 / paper-2 |
 | `--on-surface-variant` | paper-700 / slate-200 | paper-70 / paper-30 |
-| `--outline` | paper-500 / slate-400 | paper-50 / ink-50 (moved from the spec's paper-30 / ink-70 to reach 3:1) |
+| `--outline` | paper-500 / slate-400 | paper-50 / slate-55 (moved from the spec's paper-30 / ink-70 to reach 3:1) |
 | `--primary` | paper-900 / slate-100 | ink-95 / paper-5 |
 | `--secondary`, `--secondary-container` | forest-500 / forest-300, forest-400 | forest-80 / forest-50 (both equal in each mode) |
 | `--gold` | gold-500 / gold-400 | gold-55 / gold-40 |
@@ -105,7 +105,7 @@ Names are unchanged; values follow table 3 of the spec. Notable differences:
 Two behavior changes:
 
 - `--status-*-bg`, `--status-*-fg` and `--error-container` in dark mode used to be translucent `color-mix` over the page. They are now solid steps (background 10 in light and 90 in dark, text 75 in light and 25 in dark), so they no longer depend on what is underneath.
-- `--on-secondary` and `--on-error` in light mode were pure white and are now `paper-0` (also pure white); in dark mode they are `ink-98` (near black) instead of white.
+- `--on-secondary` and `--on-error` in light mode were pure white and are now `paper-0` (also pure white); in dark mode they are `slate-98` (near black) instead of white.
 
 ## 4. After migrating
 
