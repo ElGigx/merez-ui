@@ -167,7 +167,7 @@ that usage to `.btn-cta`.)
 
 ## Logo
 
-The Merez mark is **three concentric arcs** in brand gold (`--gold`, `#d19621`), each
+The Merez mark is **three concentric arcs** in brand gold (`--gold-55`, `#BE8927`), each
 lighter than the last (opacity 1 · 0.7 · 0.45) — an echo of the Inflinds waves. The
 wordmark is **"Merez"** in **Alegreya 800, sentence case** (capital M): the display face,
 the same the titles use. It never renders lowercase (`merez`); the older sun icon and the
@@ -176,7 +176,7 @@ the same the titles use. It never renders lowercase (`merez`); the older sun ico
 Assets — the source of truth:
 
 - `logo/merez-mark.svg` — the arcs alone. The app/nav icon, and the piece next to the wordmark.
-- `logo/merez-favicon.svg` — the arcs on a dark rounded square, for favicons (web and admin).
+- `logo/merez-favicon.svg` — the arcs on a slate-95 (`#0B0D0E`) rounded square, for favicons (web and admin).
 
 The full lockup is rendered by each consumer as the mark next to **live text** ("Merez" in
 real Alegreya 800, not an outline) so it stays crisp and localizable. Rules: gold is the
